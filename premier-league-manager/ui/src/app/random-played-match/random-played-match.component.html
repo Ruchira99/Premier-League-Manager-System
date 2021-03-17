@@ -1,0 +1,22 @@
+<br>
+<br>
+<br>
+<button class="bt" type="button"  (click)="generateMatch()">Generate Match</button>
+<br>
+<br>
+<table style="width:100%; text-align: center">
+  <tr>
+    <th style="background-color: darkcyan">Date</th>
+    <th style="background-color: darkcyan">Team A Name</th>
+    <th style="background-color: darkcyan">Team B Name</th>
+    <th style="background-color: darkcyan">Team A Score</th>
+    <th style="background-color: darkcyan">Team B Score</th>
+  </tr>
+  <tr *ngFor="let club of matches; let i = index;">
+    <td style="background-color: lightslategrey">{{club.date}}</td>
+    <td style="background-color: lightslategrey">{{club.teamA.name}}</td>
+    <td style="background-color: lightslategrey">{{club.teamB.name}}</td>
+    <td style="background-color: lightslategrey">{{club.teamAScore}}</td>
+    <td style="background-color: lightslategrey">{{club.teamBScore}}</td>
+  </tr>
+</table>

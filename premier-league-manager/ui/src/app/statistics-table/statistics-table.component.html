@@ -1,0 +1,42 @@
+<br>
+<br>
+<label class="lb1"> Sorting to descending order </label>
+<br>
+<br>
+
+<button [disabled]="btnPoint"  class="bt" (click)="changesort(0)" >points</button>
+<button [disabled]="btnGoal" class="bt" (click)="changesort(1)">goals</button>
+<button [disabled]="btnWin" class="bt" (click)="changesort(2)" >wins</button>
+<br>
+<br>
+<label class="lb2"> GF=Goal Scored </label>
+<label class="lb2"> GA= Goal Received </label>
+<label class="lb2"> GD=Goal Difference </label>
+<br>
+<br>
+<table style="width:100% ; text-align: center" >
+  <tr>
+    <th style="background-color: darkcyan">Club Name</th>
+    <th style="background-color: darkcyan">Played</th>
+    <th style="background-color: darkcyan">Won</th>
+    <th style="background-color: darkcyan">Lost</th>
+    <th style="background-color: darkcyan">Draw</th>
+    <th style="background-color: darkcyan">GF</th>
+    <th style="background-color: darkcyan">GA</th>
+    <th style="background-color: darkcyan">GD</th>
+    <th style="background-color: darkcyan">Points</th>
+  </tr>
+  <tr  *ngFor="let club of league; let i = index;">
+    <td style="background-color: lightsteelblue">{{club.name}}</td>
+    <td style="background-color: lightsteelblue">{{club.numberOfMatchesPlayed}}</td>
+    <td style="background-color: lightsteelblue">{{club.numberOfWins}}</td>
+    <td style="background-color: lightsteelblue">{{club.numberOfLoss}}</td>
+    <td style="background-color: lightsteelblue">{{club.numberOfMatchDraw}}</td>
+    <td style="background-color: lightsteelblue">{{club.numberOfGoalsScored}}</td>
+    <td style="background-color: lightsteelblue">{{club.numberOfGoalsAgainst}}</td>
+    <!-- Goal Difference-->
+    <td style="background-color: lightsteelblue">{{club.numberOfGoalsScored - club.numberOfGoalsAgainst}}</td>
+    <td style="background-color: lightsteelblue">{{club.numberOfPoints}}</td>
+  </tr>
+
+</table>

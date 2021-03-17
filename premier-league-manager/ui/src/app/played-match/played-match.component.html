@@ -1,0 +1,30 @@
+<br>
+<br>
+<br>
+
+<div class="search" >
+  <label>
+    <input (input)="search()" [(ngModel)]="searchVal" type="text" placeholder="Search By Date">
+  </label>
+</div>
+
+<br>
+<br>
+<table style="width:100%; text-align: center">
+  <br>
+  <tr>
+    <th style="background-color: darkcyan">Date</th>
+    <th style="background-color: darkcyan">Team A Name</th>
+    <th style="background-color: darkcyan">Team B Name</th>
+    <th style="background-color: darkcyan">Team A Score</th>
+    <th style="background-color: darkcyan">Team B Score</th>
+  </tr>
+  <tr *ngFor="let club of match; let i = index;">
+    <td style="background-color:lightskyblue">{{club.date}}</td>
+    <td style="background-color:lightskyblue">{{club.teamA.name}}</td>
+    <td style="background-color:lightskyblue">{{club.teamB.name}}</td>
+    <td style="background-color:lightskyblue">{{club.teamAScore}}</td>
+    <td style="background-color:lightskyblue">{{club.teamBScore}}</td>
+  </tr>
+
+</table>
